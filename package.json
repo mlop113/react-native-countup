@@ -1,6 +1,6 @@
 {
   "name": "react-native-countup",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Customizable react native component for number animations.",
   "main": "index.js",
   "author": "nusrath",
