@@ -1,4 +1,4 @@
-# react-native-animate-number [![npm version](https://badge.fury.io/js/react-native-animate-number.svg)](https://badge.fury.io/js/react-native-animate-number) [![circle CI](https://circleci.com/gh/wkh237/react-native-animate-number/tree/master.svg?style=shield&circle-token=3c65a007e3c5da40a3d6be4060c64c4d361d2c9f)](https://circleci.com/gh/wkh237/react-native-animate-number/)
+# react-native-countup
 
 Customizable react native component for number animations.
 
@@ -14,13 +14,13 @@ Customizable react native component for number animations.
 ## Installation
 
 ```shell
-$ npm install react-native-animate-number
+$ npm install react-native-countup
 ```
 
 ## Usage
 
 ```jsx
-import AnimateNumber from 'react-native-animate-number'
+import AnimateNumber from 'react-native-countup'
 ```
 
 ## Examples
@@ -33,6 +33,13 @@ value and performs animation.
 ```jsx
 
 <AnimateNumber value={100}/>
+
+```
+
+You can also pass in an initial value to interpolate from:
+```jsx
+
+<AnimateNumber initial={50} value={100}/>
 
 ```
 
@@ -85,10 +92,6 @@ A float number between 0 to 1, which means the progress of animation.
   }}/>
 
 ```
-
-the above example will make an animation like this
-
-![timing function example](img/timing1.gif)
 
 ### Counting
 
