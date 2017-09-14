@@ -21,6 +21,7 @@ export default class AnimateNumber extends Component {
     interval? : ?number,
     steps? : ?number,
     value : number,
+    initial : ?number,
     timing : 'linear' | 'easeOut' | 'easeIn' | () => number,
     formatter : () => {},
     onProgress : () => {},
@@ -32,7 +33,6 @@ export default class AnimateNumber extends Component {
     timing : 'linear',
     steps : 45,
     value : 0,
-    initial : ?number,
     formatter : (val) => val,
     onFinish : () => {}
   };
