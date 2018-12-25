@@ -135,14 +135,10 @@ export default class AnimateNumber extends Component {
   render () {
     const textSize = this.animatedValue.interpolate({
       inputRange: [0, 0.5, 1],
-      outputRange: [13, 25, 13]
+      outputRange: [this.props.textMinAnimate, this.props.textMaxAnimate, this.props.textMinAnimate]
     })
     return (
-      <Animated.Text style={{
-        fontSize: textSize,
-        fontWeight: '500',
-        color: 'white'
-      }}>
+      <Animated.Text style={[this.props.style, {fontSize: textSize}]}>
         {this.state.displayValue}
       </Animated.Text>)
   }
