@@ -22,6 +22,7 @@ export default class AnimateNumber extends Component {
     initial: ?number,
     timing: 'linear' | 'easeOut' | 'easeIn' | () => number,
     formatter: () => {},
+    onStart: () => {},
     onProgress: () => {},
     onFinish: () => {}
   }
@@ -32,6 +33,7 @@ export default class AnimateNumber extends Component {
     steps: 45,
     value: 0,
     formatter: (val) => val,
+    onStart: () => {},
     onFinish: () => {}
   }
 
@@ -87,6 +89,7 @@ export default class AnimateNumber extends Component {
 
   animate () {
     this.animatedValue.setValue(0)
+    this.props.onStart()
     Animated.timing(
       this.animatedValue,
       {
@@ -146,7 +149,6 @@ export default class AnimateNumber extends Component {
   startAnimate () {
 
     let progress = this.getAnimationProgress()
-
     Timer.setTimeout(() => {
 
       let value = (this.endWith - this.startFrom) / this.props.steps
